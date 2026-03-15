@@ -39,6 +39,7 @@ jobs:
         run: |
           cd terraform
           terraform show -json tfplan > tfplan.json
+          cat tfplan.json
 
       - name: Install Conftest
         run: |
