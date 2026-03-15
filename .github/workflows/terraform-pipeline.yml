@@ -57,3 +57,7 @@ jobs:
         run: |
           cd terraform
           terraform apply -auto-approve
+      - name: Drift Detection
+        run: |
+          cd terraform
+          terraform plan -detailed-exitcode || true
